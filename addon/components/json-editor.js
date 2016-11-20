@@ -15,10 +15,11 @@ export default Ember.Component.extend({
   Cached editor.
   */
   _editor: undefined,
+
   /**
 
   */
-  editor: Ember.computed('options', 'json', function() {
+  editor: Ember.computed('options', 'json', '_editor', function() {
     var self = this;
     var editor = self.get('_editor');
     // console.log('editor', editor);
